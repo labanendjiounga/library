@@ -2,6 +2,9 @@ const myLibrary = [];
 const noBookMessage = "No book to display. Please, add a book to display it here.";
 
 function Book(title, author, pages, language, publisher, volume, isRead) {
+  if (!new.target) {
+    throw new Error("Book must be called with the new operator.");
+  }
   this.id = crypto.randomUUID();
   this.title = title;
   this.author = author;
