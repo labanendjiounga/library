@@ -3,16 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library</title>
+  <title>My Library</title>
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/script.js" defer></script>
 </head>
 <body class="grid">
+  
   <div class="grid header">
+    
     <h1>My Library</h1>
+
+    <dialog>
+      
+      <p>Add a New Book</p>
+      
+      <form id="new-book">
+        
+        <div class="grid">
+          
+          <div class="grid">
+            <label for="title">Title (*)</label>
+            <input type="text" name="title" id="title" placeholder="The Rosie Project" required autofocus>
+          </div>
+
+          <div class="grid">
+            <label for="author">Author (*)</label>
+            <input type="text" name="author" id="author" placeholder="Graeme Simsion" required>
+          </div>
+
+        </div>
+
+        <div class="grid">
+
+          <div class="grid">
+            <label for="pages">Pages (*)</label>
+            <input type="number" min="1" name="pages" id="pages" placeholder="302" required>
+          </div>
+
+          <div class="grid">
+            <label for="language">Language (*)</label>
+            <input type="text" name="language" id="language" placeholder="English" required>
+          </div>
+
+        </div>
+
+        <div class="grid">
+
+          <div class="grid">
+            <label for="publisher">Publisher (*)</label>
+            <input type="text" name="publisher" id="publisher" placeholder="Simon & Schuster" required>
+          </div>
+
+          <div class="grid">
+            <label for="volume">Volume (*)</label>
+            <input type="number" min="1" name="volume" id="volume" value="1" required>
+          </div>
+          
+        </div>
+
+        <div>
+          <input type="checkbox" name="read-status" id="read-status">
+          <label for="read-status">Read</label>
+        </div>
+
+      </form>
+
+      <div class="grid">
+        <button>Close</button>
+        <button type="submit" form="new-book">Add to My Library</button>
+      </div>
+
+    </dialog>
+
     <button>New Book</button>
+
   </div>
 
   <div class="grid main"></div>
+
 </body>
 </html>
